@@ -15,7 +15,7 @@ MyPracticeTest
     set browser implicit wait  10 seconds
     maximize browser window
 
-    # LANING PAGE
+    # LANDING PAGE
     click link  xpath://a[@class='login']
     ${pageTitle} =  get window titles
     log to console  ${pageTitle}
