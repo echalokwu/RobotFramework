@@ -7,6 +7,8 @@ Test Template  INVALID LOGIN TEST
 
 
 *** Test Cases ***
+#[Documentation]     This is a test script
+#[Tags]  Smoke Test
 Right user wrong password   emma@gmail.com  admin222
 Right user empty password   emma@gmail.com  ${EMPTY}
 Wrong user right password   emm@gmail.com   moimoi123

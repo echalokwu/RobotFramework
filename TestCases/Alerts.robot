@@ -10,3 +10,4 @@ HandlinAlerts
     #handle alert  dismiss
     #handle alert  leave
     alert should be present  Press a button!
+    close browser
