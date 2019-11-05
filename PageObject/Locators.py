@@ -3,6 +3,20 @@ txt_loginUserName = "name:userName"
 txt_loginPassWord = "name:password"
 btn_singIn = "name:login"
 
+# Flight Finder Elements Locators
+slt_roundTrip = "xpath://body//b//input[1]"
+slt_oneWay = "xpath://body//b//input[2]"
+drp_passenger = "name:passCount"
+drp_departing = "name:fromPort"
+drp_frmonth = "name:fromMonth"
+drp_frday = "name:fromDay"
+drp_arriving = "name:toPort"
+drp_tomonth = "name:toMonth"
+drp_today = "name:toDay"
+slt_serviceclass = "xpath:(//INPUT[@name='servClass'])[2]"
+airline = "name:airline"
+click_continue = "name:findFlights"
+
 # Registration Elements Locators
 Reg_link = "link:REGISTER"
 txt_firstName = "name:firstName"
@@ -18,6 +32,3 @@ txt_UserName = "name:email"
 txt_PassWord = "name:password"
 txt_confrmPass = "name:confirmPassword"
 click_submit = "name:register"
-
-
-
