@@ -49,9 +49,9 @@ class FrameKeywords(LibraryComponent):
 
     @keyword
     def current_frame_should_contain(self, text, loglevel='TRACE'):
-        """Verifies that current frame contains ``text``.
+        """Verifies that the current frame contains ``text``.
 
-        See `Page Should Contain` for explanation about the ``loglevel``
+        See `Page Should Contain` for an explanation about the ``loglevel``
         argument.
 
         Prior to SeleniumLibrary 3.0 this keyword was named
@@ -64,15 +64,10 @@ class FrameKeywords(LibraryComponent):
         self.info("Current frame contains text '%s'." % text)
 
     @keyword
-    def current_frame_contains(self, text, loglevel='TRACE'):
-        """*DEPRECATED in SeleniumLibrary 3.2.* Use `Current Frame Should Contain` instead."""
-        self.current_frame_should_contain(text, loglevel)
-
-    @keyword
     def current_frame_should_not_contain(self, text, loglevel='TRACE'):
-        """Verifies that current frame does not contains ``text``.
+        """Verifies that the current frame does not contain ``text``.
 
-        See `Page Should Contain` for explanation about the ``loglevel``
+        See `Page Should Contain` for an explanation about the ``loglevel``
         argument.
         """
         if self.is_text_present(text):
@@ -88,7 +83,7 @@ class FrameKeywords(LibraryComponent):
         See the `Locating elements` section for details about the locator
         syntax.
 
-        See `Page Should Contain` for explanation about the ``loglevel``
+        See `Page Should Contain` for an explanation about the ``loglevel``
         argument.
         """
         if not self._frame_contains(locator, text):

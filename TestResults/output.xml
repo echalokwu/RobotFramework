@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20191111 22:03:53.375" generator="Robot 3.1.2 (Python 2.7.16 on darwin)">
+<suite source="/Users/echalo/PycharmCoding/RobotFramework/TestCases/OrangeHRM_LoginTest.robot" id="s1" name="OrangeHRM LoginTest">
+<kw type="setup" name="OPEN MY BROWSER" library="OrangeHRMKeywords">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${SITEURL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20191111 22:03:53.651" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/index.php/auth/login'</msg>
+<status status="PASS" endtime="20191111 22:03:56.973" starttime="20191111 22:03:53.651"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20191111 22:03:57.127" starttime="20191111 22:03:56.973"></status>
+</kw>
+<status status="PASS" endtime="20191111 22:03:57.127" starttime="20191111 22:03:53.650"></status>
+</kw>
+<test id="s1-t1" name="Invalid_LoginTest_HRM">
+<kw name="ENTER USER NAME" library="OrangeHRMKeywords">
+<arguments>
+<arg>Admin</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${txt_LoginUserName}</arg>
+<arg>${Username}</arg>
+</arguments>
+<msg timestamp="20191111 22:03:57.128" level="INFO">Typing text 'Admin' into text field 'txtUsername'</msg>
+<status status="PASS" endtime="20191111 22:03:57.231" starttime="20191111 22:03:57.128"></status>
+</kw>
+<status status="PASS" endtime="20191111 22:03:57.231" starttime="20191111 22:03:57.128"></status>
+</kw>
+<kw name="ENTER PASSWORD" library="OrangeHRMKeywords">
+<arguments>
+<arg>123admin</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${txt_LoginPassword}</arg>
+<arg>${Password}</arg>
+</arguments>
+<msg timestamp="20191111 22:03:57.232" level="INFO">Typing text '123admin' into text field 'txtPassword'</msg>
+<status status="PASS" endtime="20191111 22:03:57.289" starttime="20191111 22:03:57.232"></status>
+</kw>
+<status status="PASS" endtime="20191111 22:03:57.289" starttime="20191111 22:03:57.231"></status>
+</kw>
+<kw name="CLICK LOGIN" library="OrangeHRMKeywords">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${btn_Login}</arg>
+</arguments>
+<msg timestamp="20191111 22:03:57.289" level="INFO">Clicking button 'Submit'.</msg>
+<status status="PASS" endtime="20191111 22:03:58.111" starttime="20191111 22:03:57.289"></status>
+</kw>
+<status status="PASS" endtime="20191111 22:03:58.111" starttime="20191111 22:03:57.289"></status>
+</kw>
+<kw name="ERROR MESSAGE SHOULD BE VISIBLE" library="OrangeHRMKeywords">
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Invalid credentials</arg>
+</arguments>
+<msg timestamp="20191111 22:03:58.128" level="INFO">Current page contains text 'Invalid credentials'.</msg>
+<status status="PASS" endtime="20191111 22:03:58.128" starttime="20191111 22:03:58.112"></status>
+</kw>
+<status status="PASS" endtime="20191111 22:03:58.128" starttime="20191111 22:03:58.111"></status>
+</kw>
+<kw name="TAKE SCREENSHOT" library="OrangeHRMKeywords">
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+<arg>/Users/echalo/PycharmCoding/RobotFramework/TestCases/Screeshots/OrangeHRMPage.png</arg>
+</arguments>
+<msg timestamp="20191111 22:03:58.620" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../TestCases/Screeshots/OrangeHRMPage.png"&gt;&lt;img src="../TestCases/Screeshots/OrangeHRMPage.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20191111 22:03:58.620" starttime="20191111 22:03:58.128"></status>
+</kw>
+<status status="PASS" endtime="20191111 22:03:58.620" starttime="20191111 22:03:58.128"></status>
+</kw>
+<status status="PASS" endtime="20191111 22:03:58.620" critical="yes" starttime="20191111 22:03:57.127"></status>
+</test>
+<test id="s1-t2" name="Valid_LoginTest_HRM">
+<kw name="ENTER USER NAME" library="OrangeHRMKeywords">
+<arguments>
+<arg>Admin</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${txt_LoginUserName}</arg>
+<arg>${Username}</arg>
+</arguments>
+<msg timestamp="20191111 22:03:58.622" level="INFO">Typing text 'Admin' into text field 'txtUsername'</msg>
+<status status="PASS" endtime="20191111 22:03:58.680" starttime="20191111 22:03:58.622"></status>
+</kw>
+<status status="PASS" endtime="20191111 22:03:58.680" starttime="20191111 22:03:58.621"></status>
+</kw>
+<kw name="ENTER PASSWORD" library="OrangeHRMKeywords">
+<arguments>
+<arg>admin123</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${txt_LoginPassword}</arg>
+<arg>${Password}</arg>
+</arguments>
+<msg timestamp="20191111 22:03:58.681" level="INFO">Typing text 'admin123' into text field 'txtPassword'</msg>
+<status status="PASS" endtime="20191111 22:03:58.733" starttime="20191111 22:03:58.681"></status>
+</kw>
+<status status="PASS" endtime="20191111 22:03:58.733" starttime="20191111 22:03:58.680"></status>
+</kw>
+<kw name="CLICK LOGIN" library="OrangeHRMKeywords">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${btn_Login}</arg>
+</arguments>
+<msg timestamp="20191111 22:03:58.733" level="INFO">Clicking button 'Submit'.</msg>
+<status status="PASS" endtime="20191111 22:03:59.829" starttime="20191111 22:03:58.733"></status>
+</kw>
+<status status="PASS" endtime="20191111 22:03:59.829" starttime="20191111 22:03:58.733"></status>
+</kw>
+<kw name="VERIFY SUCCESSFUL LOGIN PAGE" library="OrangeHRMKeywords">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>OrangeHRM</arg>
+</arguments>
+<msg timestamp="20191111 22:03:59.836" level="INFO">Page title is 'OrangeHRM'.</msg>
+<status status="PASS" endtime="20191111 22:03:59.836" starttime="20191111 22:03:59.830"></status>
+</kw>
+<status status="PASS" endtime="20191111 22:03:59.836" starttime="20191111 22:03:59.829"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20191111 22:04:02.838" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20191111 22:04:02.839" starttime="20191111 22:03:59.836"></status>
+</kw>
+<kw name="CLICK WELCOME ADMIN" library="OrangeHRMKeywords">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${welcome_Admin}</arg>
+</arguments>
+<msg timestamp="20191111 22:04:02.841" level="INFO">Clicking element '//a[@id='welcome']'.</msg>
+<status status="PASS" endtime="20191111 22:04:02.922" starttime="20191111 22:04:02.840"></status>
+</kw>
+<status status="PASS" endtime="20191111 22:04:02.922" starttime="20191111 22:04:02.839"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20191111 22:04:05.923" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20191111 22:04:05.924" starttime="20191111 22:04:02.922"></status>
+</kw>
+<kw name="LOGOUT" library="OrangeHRMKeywords">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${logout}</arg>
+</arguments>
+<msg timestamp="20191111 22:04:05.925" level="INFO">Clicking element '//a[contains(text(),'Logout')]'.</msg>
+<status status="PASS" endtime="20191111 22:04:06.501" starttime="20191111 22:04:05.925"></status>
+</kw>
+<status status="PASS" endtime="20191111 22:04:06.502" starttime="20191111 22:04:05.924"></status>
+</kw>
+<status status="PASS" endtime="20191111 22:04:06.502" critical="yes" starttime="20191111 22:03:58.621"></status>
+</test>
+<kw type="teardown" name="CLOSE MY BROWSER" library="OrangeHRMKeywords">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20191111 22:04:06.581" starttime="20191111 22:04:06.504"></status>
+</kw>
+<status status="PASS" endtime="20191111 22:04:06.581" starttime="20191111 22:04:06.504"></status>
+</kw>
+<status status="PASS" endtime="20191111 22:04:06.581" starttime="20191111 22:03:53.376"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="OrangeHRM LoginTest" pass="2">OrangeHRM LoginTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

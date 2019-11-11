@@ -15,20 +15,17 @@
 # limitations under the License.
 
 # Originally based on  Robot Framework 3.0.2 robot.utils.robottypes and
-# robot.utils.PY3 Can be removed when library minimum required Robot Framework
-# version is greater than 3.0.2. Then Robot Framework is_truthy should
-# also support string NONE as Python False.
+# Can be removed when library minimum required Robot Framework
+# version is greater than 3.0.4. Then Robot Framework is_truthy should
+# also support string NONE as Python False. Also string 0 is evaluated
+# as False in RF 3.1 but not in 3.0.4.
 from robot.utils import is_string
-try:
-    from robot.utils import PY3
-except ImportError:
-    import sys
-    PY3 = sys.version_info[0] == 3
+from robot.utils import PY3
 
 
 def is_truthy(item):
     if is_string(item):
-        return item.upper() not in ('FALSE', 'NO', '', 'NONE')
+        return item.upper() not in ('FALSE', 'NO', '', 'NONE', '0', 'OFF')
     return bool(item)
 
 

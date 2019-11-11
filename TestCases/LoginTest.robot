@@ -25,3 +25,7 @@ LoginTest
     sleep  5
 
     Close my Browsers
+
+
+#pabot --processes 2 TestCases/*.robot
+#pabot --processes 2 --outputdir Result TestCases/*.robot

@@ -2,10 +2,15 @@
 Library  SeleniumLibrary
 Resource  ../Resources/RegistrationKeywords.robot
 
+*** Variables ***
+${Brower}   chrome
+${Url}  http://www.newtours.demoaut.com/
+
+
 
 *** Test Cases ***
 RegistrationTest
-    open browser  http://www.newtours.demoaut.com/   chrome
+    Open my Browser       ${Url}    ${Brower}
     Click Register Link
     Enter First Name  emma
     Enter Last Name  emma
